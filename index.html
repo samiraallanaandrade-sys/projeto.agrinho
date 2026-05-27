@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Árvores Nativas do Paraná</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Árvores Nativas do Paraná</h1>
+
+      <p>
+        Conheça algumas das espécies mais importantes da flora paranaense
+        e descubra a riqueza natural da Mata Atlântica e da Floresta de Araucária.
+      </p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#arvores">Espécies</a></li>
+      <li><a href="#preservacao">Preservação</a></li>
+      <li><a href="#quiz">Curiosidade</a></li>
+    </ul>
+  </nav>
+
+  <section class="container" id="arvores">
+    <h2 class="section-title">Espécies Nativas</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200&auto=format&fit=crop" alt="Araucária">
+
+        <div class="card-content">
+          <h3>Araucária</h3>
+
+          <p>
+            Símbolo do Paraná, a Araucária angustifolia é uma das árvores mais
+            conhecidas do sul do Brasil e produz o pinhão.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Ipê-amarelo">
+
+        <div class="card-content">
+          <h3>Ipê-Amarelo</h3>
+
+          <p>
+            Muito valorizado por sua beleza, floresce intensamente durante o inverno
+            e atrai diversas espécies de aves.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1200&auto=format&fit=crop" alt="Imbuia">
+
+        <div class="card-content">
+          <h3>Imbuia</h3>
+
+          <p>
+            Árvore típica da Mata Atlântica, conhecida pela madeira resistente
+            e pela importância ecológica.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="info" id="preservacao">
+    <h2 class="section-title">Importância da Preservação</h2>
+
+    <p>
+      As árvores nativas do Paraná desempenham papel fundamental na manutenção
+      da biodiversidade, proteção dos rios, equilíbrio climático e conservação
+      da fauna.
+    </p>
+  </section>
+
+  <section class="container" id="quiz">
+    <h2 class="section-title">Curiosidade</h2>
+
+    <div class="quiz">
+      <p>
+        Clique no botão para descobrir uma curiosidade sobre a flora paranaense:
+      </p>
+
+      <button onclick="mostrarCuriosidade()">
+        Mostrar Curiosidade
+      </button>
+
+      <div id="resultado"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Site educativo sobre Árvores Nativas do Paraná 🌳</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
