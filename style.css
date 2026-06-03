@@ -66,7 +66,7 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
@@ -104,11 +104,12 @@ header nav ul li a:hover {
     border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
-    transition: 0.3s transform;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .btn:hover {
     transform: scale(1.05);
+    background-color: #e6a600;
 }
 
 /* Seção Pilares */
@@ -138,11 +139,12 @@ header nav ul li a:hover {
     flex: 1;
     min-width: 280px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
 .card .icone {
@@ -189,6 +191,11 @@ header nav ul li a:hover {
     border-radius: 8px;
     width: 150px;
     font-size: 1rem;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: var(--verde-principal);
 }
 
 .input-group button {
@@ -199,7 +206,7 @@ header nav ul li a:hover {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .input-group button:hover {
@@ -226,7 +233,9 @@ header nav ul li a:hover {
     color: var(--verde-principal);
 }
 
-.hidden { display: none; }
+.hidden { 
+    display: none; 
+}
 
 /* Contato */
 .contato-section {
@@ -247,9 +256,17 @@ header nav ul li a:hover {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
+    outline: none;
 }
 
-#form-contato textarea { height: 120px; resize: none; }
+#form-contato input:focus, #form-contato textarea:focus {
+    border-color: var(--verde-principal);
+}
+
+#form-contato textarea { 
+    height: 120px; 
+    resize: none; 
+}
 
 #form-contato button {
     background-color: var(--ouro);
@@ -258,10 +275,12 @@ header nav ul li a:hover {
     border-radius: 8px;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-#form-contato button:hover { background-color: #e6a600; }
+#form-contato button:hover { 
+    background-color: #e6a600; 
+}
 
 footer {
     background-color: var(--verde-escuro);
@@ -272,7 +291,18 @@ footer {
 
 /* Responsividade Básica */
 @media (max-width: 768px) {
-    header .interface { flex-direction: column; gap: 15px; }
-    .texto-banner h1 { font-size: 2.3rem; }
-    .metricas { flex-direction: column; }
+    header .interface { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    .texto-banner h1 { 
+        font-size: 2.3rem; 
+    }
+    .metricas { 
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .cards-container {
+        flex-direction: column;
+    }
 }
