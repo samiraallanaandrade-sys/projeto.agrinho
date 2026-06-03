@@ -3,109 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte e Sustentável</title>
+    <title>Agro Forte & Sustentável</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="interface">
+        <div class="container header-container">
             <div class="logo">
-                <h2>Agro<span>Sustentável</span></h2>
+                <i class="fa-solid fa-leaf"></i> <span>Agro<span>Forte</span></span>
             </div>
             <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#pilares">Pilares</a></li>
-                    <li><a href="#simulador">Simulador</a></li>
+                    <li><a href="#impacto">Nosso Impacto</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="banner">
-        <div class="interface">
-            <div class="texto-banner">
-                <h1>O Futuro da Terra é Agora</h1>
-                <p>Descubra como a união entre alta produtividade tecnológica e preservação ambiental constrói um agronegócio indestrutível.</p>
-                <a href="#simulador" class="btn">Simular Meu Impacto</a>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>O Futuro da Terra é Pop, Forte e Sustentável</h1>
+            <p>Unindo alta produtividade tecnológica com a preservação do meio ambiente. Cultivando hoje o amanhã do planeta.</p>
+            <a href="#sobre" class="btn">Conheça Mais</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container section">
+        <div class="sobre-grid">
+            <div class="sobre-texto">
+                <h2>Alimentando o Mundo, Protegendo a Natureza</h2>
+                <p>O conceito de <strong>Agro Forte e Sustentável</strong> mostra que a eficiência no campo e a conservação ambiental caminham lado a lado. Através do uso de tecnologia de ponta, manejo biológico e respeito aos recursos naturais, maximizamos a produção sem esgotar o solo.</p>
+                <p>Apoiamos o produtor rural na transição para práticas mais verdes, garantindo rentabilidade financeira e segurança alimentar para as próximas gerações.</p>
+            </div>
+            <div class="sobre-imagem">
+                <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80" alt="Campo verde sustentável">
             </div>
         </div>
     </section>
 
-    <section id="pilares" class="pilares-section">
-        <div class="interface">
-            <h2 class="titulo-sessao">Os Pilares do Agro Forte</h2>
-            <div class="cards-container">
-                
+    <section id="pilares" class="bg-light section">
+        <div class="container">
+            <h2 class="text-center">Nossos Três Pilares</h2>
+            <div class="cards-grid">
                 <div class="card">
-                    <div class="icone">🚜</div>
+                    <i class="fa-solid fa-microchip card-icon"></i>
                     <h3>Tecnologia de Precisão</h3>
-                    <p>Uso de drones, sensores de solo e IA para aplicar insumos na quantidade exata, evitando desperdícios e protegendo o solo.</p>
+                    <p>Uso de drones, sensores e IA para aplicar insumos na quantidade exata, evitando desperdícios e contaminação.</p>
                 </div>
-
                 <div class="card">
-                    <div class="icone">🌱</div>
-                    <h3>Manejo Biológico</h3>
-                    <p>Substituição gradual de defensivos químicos por soluções biológicas e rotação de culturas, mantendo a terra viva e fértil.</p>
+                    <i class="fa-solid fa-recycle card-icon"></i>
+                    <h3>Economia Circular</h3>
+                    <p>Reaproveitamento de resíduos orgânicos para biofertilizantes e geração de energia limpa através de biomassa.</p>
                 </div>
-
                 <div class="card">
-                    <div class="icone">☀️</div>
-                    <h3>Energia Limpa</h3>
-                    <p>Fazendas autossuficientes utilizando energia solar e biomassa para alimentar maquinários e sistemas de irrigação.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="simulador" class="simulador-section">
-        <div class="interface">
-            <div class="simulador-box">
-                <h2>Simulador de Impacto Verde</h2>
-                <p>Insira o tamanho da sua propriedade simulada (em hectares) para ver a diferença que a tecnologia sustentável faz por ano:</p>
-                
-                <div class="input-group">
-                    <input type="number" id="hectares" placeholder="Ex: 50" min="1">
-                    <button id="btn-calcular">Calcular Economia</button>
-                </div>
-
-                <div id="resultado" class="resultado-box hidden">
-                    <h3>Resultados Estimados por Ano:</h3>
-                    <div class="metricas">
-                        <div class="metrica-item">
-                            <span class="valor" id="agua-salva">0</span>
-                            <span class="legenda">Litros de água preservados</span>
-                        </div>
-                        <div class="metrica-item">
-                            <span class="valor" id="co2-reduzido">0</span>
-                            <span class="legenda">kg de CO₂ evitados na atmosfera</span>
-                        </div>
-                    </div>
+                    <i class="fa-solid fa-droplet card-icon"></i>
+                    <h3>Manejo da Água</h3>
+                    <p>Sistemas de irrigação inteligente e captação de água da chuva que reduzem o consumo hídrico drasticamente.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="contato-section">
-        <div class="interface">
-            <h2>Fale Conosco</h2>
-            <p>Envie suas dúvidas ou sugestões para espalhar essa ideia.</p>
+    <section id="impacto" class="section impacto-section">
+        <div class="container text-center">
+            <h2>Nosso Impacto em Números</h2>
+            <p>Resultados reais de práticas sustentáveis aplicadas no campo.</p>
+            <div class="contador-grid">
+                <div class="contador-item">
+                    <span class="numero" data-alvo="15000">0</span>
+                    <p>Hectares Preservados</p>
+                </div>
+                <div class="contador-item">
+                    <span class="numero" data-alvo="35">0</span><span>%</span>
+                    <p>Menos Emissão de CO₂</p>
+                </div>
+                <div class="contador-item">
+                    <span class="numero" data-alvo="1200">0</span>
+                    <p>Produtores Certificados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container section">
+        <h2 class="text-center">Faça Parte Dessa Mudança</h2>
+        <div class="contato-wrapper">
             <form id="form-contato">
-                <input type="text" id="nome" placeholder="Seu Nome" required>
-                <input type="email" id="email" placeholder="Seu E-mail" required>
-                <textarea id="mensagem" placeholder="Sua mensagem sobre sustentabilidade..." required></textarea>
-                <button type="submit">Enviar Mensagem</button>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="5" required placeholder="Como podemos te ajudar no agro sustentável?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-block">Enviar Mensagem</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Agro Forte & Sustentável. Inovação que protege nossa terra.</p>
+        <p>&copy; 2026 Agro Forte & Sustentável. Desenvolvido com foco no futuro do planeta.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script href="script.js"></script>
 </body>
 </html>
