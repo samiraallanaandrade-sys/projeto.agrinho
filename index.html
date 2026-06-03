@@ -3,71 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Agrinho | Agro Forte e Sustentável</title>
+    <title>Agro Forte e Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>🌱 Projeto Agrinho</h1>
+        <div class="interface">
+            <div class="logo">
+                <h2>Agro<span>Sustentável</span></h2>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">O que é?</a></li>
-                    <li><a href="#praticas">Práticas</a></li>
-                    <li><a href="#contato">Participe</a></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#simulador">Simulador</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h2>Agro Forte e Sustentável</h2>
-            <p>Produzir com eficiência hoje, garantindo os recursos para as gerações de amanhã. Conheça o futuro da agricultura.</p>
-            <a href="#sobre" class="btn">Saiba Mais</a>
+    <section id="home" class="banner">
+        <div class="interface">
+            <div class="texto-banner">
+                <h1>O Futuro da Terra é Agora</h1>
+                <p>Descubra como a união entre alta produtividade tecnológica e preservação ambiental constrói um agronegócio indestrutível.</p>
+                <a href="#simulador" class="btn">Simular Meu Impacto</a>
+            </div>
         </div>
     </section>
 
-    <section id="sobre" class="container">
-        <h2>O que é a Agricultura Sustentável?</h2>
-        <p>A agricultura sustentável baseia-se no princípio de atender às necessidades do presente sem comprometer a capacidade das gerações futuras de atenderem às suas próprias necessidades. É a união entre tecnologia, respeito ao meio ambiente e produtividade.</p>
+    <section id="pilares" class="pilares-section">
+        <div class="interface">
+            <h2 class="titulo-sessao">Os Pilares do Agro Forte</h2>
+            <div class="cards-container">
+                
+                <div class="card">
+                    <div class="icone">🚜</div>
+                    <h3>Tecnologia de Precisão</h3>
+                    <p>Uso de drones, sensores de solo e IA para aplicar insumos na quantidade exata, evitando desperdícios e protegendo o solo.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icone">🌱</div>
+                    <h3>Manejo Biológico</h3>
+                    <p>Substituição gradual de defensivos químicos por soluções biológicas e rotação de culturas, mantendo a terra viva e fértil.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icone">☀️</div>
+                    <h3>Energia Limpa</h3>
+                    <p>Fazendas autossuficientes utilizando energia solar e biomassa para alimentar maquinários e sistemas de irrigação.</p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <section id="praticas" class="bg-light">
-        <div class="container">
-            <h2>Práticas Sustentáveis no Campo</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>💧 Uso Consciente da Água</h3>
-                    <p>Sistemas de irrigação inteligentes, como o gotejamento, evitam o desperdício e garantem que a planta receba apenas o necessário.</p>
+    <section id="simulador" class="simulador-section">
+        <div class="interface">
+            <div class="simulador-box">
+                <h2>Simulador de Impacto Verde</h2>
+                <p>Insira o tamanho da sua propriedade simulada (em hectares) para ver a diferença que a tecnologia sustentável faz por ano:</p>
+                
+                <div class="input-group">
+                    <input type="number" id="hectares" placeholder="Ex: 50" min="1">
+                    <button id="btn-calcular">Calcular Economia</button>
                 </div>
-                <div class="card">
-                    <h3>🔄 Rotação de Culturas</h3>
-                    <p>Alternar o que é plantado na terra ajuda a não esgotar os nutrientes do solo e diminui a necessidade de fertilizantes químicos.</p>
-                </div>
-                <div class="card">
-                    <h3>🛰️ Tecnologia Agrícola</h3>
-                    <p>O uso de drones e sensores ajuda o produtor a monitorar a lavoura em tempo real, aplicando defensivos apenas onde é estritamente necessário.</p>
+
+                <div id="resultado" class="resultado-box hidden">
+                    <h3>Resultados Estimados por Ano:</h3>
+                    <div class="metricas">
+                        <div class="metrica-item">
+                            <span class="valor" id="agua-salva">0</span>
+                            <span class="legenda">Litros de água preservados</span>
+                        </div>
+                        <div class="metrica-item">
+                            <span class="valor" id="co2-reduzido">0</span>
+                            <span class="legenda">kg de CO₂ evitados na atmosfera</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="container">
-        <h2>Junte-se a essa causa!</h2>
-        <p>Tem uma ideia para melhorar o agro na sua região? Deixe sua mensagem.</p>
-        <form id="form-contato">
-            <input type="text" id="nome" placeholder="Seu Nome" required>
-            <input type="email" id="email" placeholder="Seu E-mail" required>
-            <textarea id="mensagem" placeholder="Sua Mensagem/Ideia" required></textarea>
-            <button type="submit" class="btn">Enviar Ideia</button>
-        </form>
+    <section id="contato" class="contato-section">
+        <div class="interface">
+            <h2>Fale Conosco</h2>
+            <p>Envie suas dúvidas ou sugestões para espalhar essa ideia.</p>
+            <form id="form-contato">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" placeholder="Sua mensagem sobre sustentabilidade..." required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Projeto Agrinho - Feito com dedicação para um futuro mais verde.</p>
+        <p>&copy; 2026 Agro Forte & Sustentável. Inovação que protege nossa terra.</p>
     </footer>
 
     <script src="script.js"></script>
