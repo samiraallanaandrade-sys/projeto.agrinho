@@ -1,110 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Árvores Nativas do Paraná</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho | Agro Forte e Sustentável</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <div>
-      <h1>Árvores Nativas do Paraná</h1>
-
-      <p>
-        Conheça algumas das espécies mais importantes da flora paranaense
-        e descubra a riqueza natural da Mata Atlântica e da Floresta de Araucária.
-      </p>
-    </div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#arvores">Espécies</a></li>
-      <li><a href="#preservacao">Preservação</a></li>
-      <li><a href="#quiz">Curiosidade</a></li>
-    </ul>
-  </nav>
-
-  <section class="container" id="arvores">
-    <h2 class="section-title">Espécies Nativas</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200&auto=format&fit=crop" alt="Araucária">
-
-        <div class="card-content">
-          <h3>Araucária</h3>
-
-          <p>
-            Símbolo do Paraná, a Araucária angustifolia é uma das árvores mais
-            conhecidas do sul do Brasil e produz o pinhão.
-          </p>
+    <header>
+        <div class="container">
+            <h1>🌱 Projeto Agrinho</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">O que é?</a></li>
+                    <li><a href="#praticas">Práticas</a></li>
+                    <li><a href="#contato">Participe</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Ipê-amarelo">
-
-        <div class="card-content">
-          <h3>Ipê-Amarelo</h3>
-
-          <p>
-            Muito valorizado por sua beleza, floresce intensamente durante o inverno
-            e atrai diversas espécies de aves.
-          </p>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Agro Forte e Sustentável</h2>
+            <p>Produzir com eficiência hoje, garantindo os recursos para as gerações de amanhã. Conheça o futuro da agricultura.</p>
+            <a href="#sobre" class="btn">Saiba Mais</a>
         </div>
-      </div>
+    </section>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1200&auto=format&fit=crop" alt="Imbuia">
+    <section id="sobre" class="container">
+        <h2>O que é a Agricultura Sustentável?</h2>
+        <p>A agricultura sustentável baseia-se no princípio de atender às necessidades do presente sem comprometer a capacidade das gerações futuras de atenderem às suas próprias necessidades. É a união entre tecnologia, respeito ao meio ambiente e produtividade.</p>
+    </section>
 
-        <div class="card-content">
-          <h3>Imbuia</h3>
-
-          <p>
-            Árvore típica da Mata Atlântica, conhecida pela madeira resistente
-            e pela importância ecológica.
-          </p>
+    <section id="praticas" class="bg-light">
+        <div class="container">
+            <h2>Práticas Sustentáveis no Campo</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>💧 Uso Consciente da Água</h3>
+                    <p>Sistemas de irrigação inteligentes, como o gotejamento, evitam o desperdício e garantem que a planta receba apenas o necessário.</p>
+                </div>
+                <div class="card">
+                    <h3>🔄 Rotação de Culturas</h3>
+                    <p>Alternar o que é plantado na terra ajuda a não esgotar os nutrientes do solo e diminui a necessidade de fertilizantes químicos.</p>
+                </div>
+                <div class="card">
+                    <h3>🛰️ Tecnologia Agrícola</h3>
+                    <p>O uso de drones e sensores ajuda o produtor a monitorar a lavoura em tempo real, aplicando defensivos apenas onde é estritamente necessário.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-    </div>
-  </section>
+    <section id="contato" class="container">
+        <h2>Junte-se a essa causa!</h2>
+        <p>Tem uma ideia para melhorar o agro na sua região? Deixe sua mensagem.</p>
+        <form id="form-contato">
+            <input type="text" id="nome" placeholder="Seu Nome" required>
+            <input type="email" id="email" placeholder="Seu E-mail" required>
+            <textarea id="mensagem" placeholder="Sua Mensagem/Ideia" required></textarea>
+            <button type="submit" class="btn">Enviar Ideia</button>
+        </form>
+    </section>
 
-  <section class="info" id="preservacao">
-    <h2 class="section-title">Importância da Preservação</h2>
+    <footer>
+        <p>&copy; 2026 Projeto Agrinho - Feito com dedicação para um futuro mais verde.</p>
+    </footer>
 
-    <p>
-      As árvores nativas do Paraná desempenham papel fundamental na manutenção
-      da biodiversidade, proteção dos rios, equilíbrio climático e conservação
-      da fauna.
-    </p>
-  </section>
-
-  <section class="container" id="quiz">
-    <h2 class="section-title">Curiosidade</h2>
-
-    <div class="quiz">
-      <p>
-        Clique no botão para descobrir uma curiosidade sobre a flora paranaense:
-      </p>
-
-      <button onclick="mostrarCuriosidade()">
-        Mostrar Curiosidade
-      </button>
-
-      <div id="resultado"></div>
-    </div>
-  </section>
-
-  <footer>
-    <p>Site educativo sobre Árvores Nativas do Paraná 🌳</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
