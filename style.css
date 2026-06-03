@@ -1,190 +1,278 @@
-/* --- Reset e Configurações Gerais --- */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 :root {
-    --primary-color: #2e7d32; /* Verde Agro */
-    --secondary-color: #81c784; /* Verde Claro */
-    --dark-color: #1b5e20;
-    --text-color: #333;
-    --light-bg: #f4f9f4;
-    --white: #ffffff;
-}
-
-html {
-    scroll-behavior: smooth;
+    --verde-escuro: #1b4332;
+    --verde-principal: #2d6a4f;
+    --verde-claro: #d8f3dc;
+    --ouro: #ffb703;
+    --cinza-claro: #f8f9fa;
+    --texto: #212529;
 }
 
 body {
-    color: var(--text-color);
-    line-height: 1.6;
-    background-color: var(--white);
+    color: var(--texto);
+    background-color: #ffffff;
+    scroll-behavior: smooth;
 }
 
-.container {
+.interface {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.section {
-    padding: 80px 0;
-}
-
-.bg-light {
-    background-color: var(--light-bg);
-}
-
-.text-center {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: var(--dark-color);
-    margin-bottom: 20px;
-}
-
-/* --- Botões --- */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: var(--dark-color);
-}
-
-.btn-block {
-    width: 100%;
-}
-
-/* --- Cabeçalho / Nav --- */
+/* Header */
 header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
+    background-color: var(--verde-escuro);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.header-container {
+header .interface {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo h2 {
+    color: #fff;
+    font-weight: 700;
 }
 
-.logo span span {
-    color: var(--text-color);
+.logo h2 span {
+    color: var(--ouro);
 }
 
-.nav-links {
+header nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
 }
 
-.nav-links a {
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
+header nav ul li a:hover {
+    color: var(--ouro);
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* --- Seção Hero --- */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), 
-                url('https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-    height: 80vh;
+/* Banner Principal */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad451?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
+    color: #fff;
+    padding-top: 80px;
 }
 
-.hero-content h1 {
+.texto-banner h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    font-weight: 800;
+    line-height: 1.2;
 }
 
-.hero-content p {
-    font-size: 1.3rem;
+.texto-banner p {
+    font-size: 1.2rem;
+    max-width: 600px;
     margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #e0e0e0;
 }
 
-/* --- Seção Sobre --- */
-.sobre-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+.btn {
+    display: inline-block;
+    background-color: var(--ouro);
+    color: var(--verde-escuro);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s transform;
 }
 
-.sobre-texto p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+.btn:hover {
+    transform: scale(1.05);
 }
 
-.sobre-imagem img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* Seção Pilares */
+.pilares-section {
+    padding: 80px 0;
+    background-color: var(--cinza-claro);
+    text-align: center;
 }
 
-/* --- Seção Pilares (Cards) --- */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.titulo-sessao {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background-color: var(--white);
+    background: #fff;
     padding: 40px 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20
+    transform: translateY(-10px);
+}
+
+.card .icone {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+}
+
+/* Simulador */
+.simulador-section {
+    padding: 80px 0;
+    background-color: var(--verde-claro);
+}
+
+.simulador-box {
+    background: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.simulador-box h2 {
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+}
+
+.input-group {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-group input {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    font-size: 1rem;
+}
+
+.input-group button {
+    background-color: var(--verde-principal);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.input-group button:hover {
+    background-color: var(--verde-escuro);
+}
+
+.resultado-box {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #ddd;
+}
+
+.metricas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.metrica-item .valor {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--verde-principal);
+}
+
+.hidden { display: none; }
+
+/* Contato */
+.contato-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#form-contato {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-contato input, #form-contato textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#form-contato textarea { height: 120px; resize: none; }
+
+#form-contato button {
+    background-color: var(--ouro);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#form-contato button:hover { background-color: #e6a600; }
+
+footer {
+    background-color: var(--verde-escuro);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header .interface { flex-direction: column; gap: 15px; }
+    .texto-banner h1 { font-size: 2.3rem; }
+    .metricas { flex-direction: column; }
+}
